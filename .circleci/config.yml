@@ -3,13 +3,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
-
+      - image: circleci/rust:latest
     steps:
       - checkout
       - run:
           name: Version information
-          command: cargo --version
+          command: rustc --version; cargo --version; rustup --version
       - run:
           name: Build all targets
           command: cargo build --all --all-targets
