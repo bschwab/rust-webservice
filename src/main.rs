@@ -15,3 +15,14 @@ fn main() {
 
     server.listen("127.0.0.1:6000");
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn dummy_test() {
+        let dummy = 5;
+        assert_eq!(5, dummy);
+    }
+}
