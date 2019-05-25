@@ -26,8 +26,8 @@ jobs:
             - target/debug/deps
           key: v4-cargo-cache-{{ arch }}-{{ checksum "Cargo.lock" }}
       - run:
-          name: Build Time
-          command: date
-      - run:
           name: Run All Tests
           command: cargo test --all
+      - run:
+          name: Build Time
+          command: date
