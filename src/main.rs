@@ -13,7 +13,7 @@ fn main() {
         }
     });
 
-    server.listen("127.0.0.1:6000");
+    server.listen("0.0.0.0:6000").unwrap();
 }
 
 #[cfg(test)]

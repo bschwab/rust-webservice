@@ -1,5 +1,5 @@
 [package]
-name = "demo"
+name = "myapp"
 version = "0.1.0"
 authors = ["bryan schwab <bschwab@gmail.com>"]
 
