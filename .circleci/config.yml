@@ -9,6 +9,11 @@ jobs:
           name: Version Information
           command: rustc --version; cargo --version; rustup --version
       - run:
+          name: Setup Env
+          command: |
+            echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
+            echo 'export IMAGE_NAME=myapp' >> $BASH_ENV
+      - run:
           name: Calculate Dependencies
           command: cargo generate-lockfile
       - restore_cache:
