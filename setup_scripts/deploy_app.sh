@@ -30,4 +30,4 @@ echo "Starting Docker Image name: $DOCKER_IMAGE"
 
 docker run -d --rm=true -p 80:6000 --name $CONAINER_NAME $DOCKER_IMAGE
 
-docker ps -1
+docker ps -l
