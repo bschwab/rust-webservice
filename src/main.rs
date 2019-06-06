@@ -9,7 +9,7 @@ fn main() {
     server.utilize(router! {
         get "/status" => |_request, mut response| {
             response.set(MediaType::Json);
-            r#"{ "status": "OK" }"#
+            r#"{ "status": "Ok" }"#
         }
     });
 
