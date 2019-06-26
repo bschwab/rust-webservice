@@ -28,6 +28,9 @@ fi
 
 echo "Starting Docker Image name: $DOCKER_IMAGE"
 
+# for private repos
+echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+
 docker run -d --rm=true -p 80:6000 --name $CONAINER_NAME $DOCKER_IMAGE
 
 docker ps -l
