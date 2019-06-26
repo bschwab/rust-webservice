@@ -1,7 +1,7 @@
-# rust-webservice
+# rust-webservice  
 
-to start
+to start  
 $ cargo build && cargo test
 
-in another terminal
+in another terminal  
 $ curl localhost:6000/status
