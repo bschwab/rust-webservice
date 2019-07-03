@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@0.0.4
+
 jobs:
   build:
     docker:
@@ -49,8 +53,8 @@ jobs:
       - run:
           name: Build Time
           command: date
+
 workflows:
-  version: 2
-  build_and_test:
+  build_test_deploy:
     jobs:
       - build
